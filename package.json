@@ -6,14 +6,21 @@
   "scripts": {
     "deploy": "serverless deploy -v",
     "invoke": "serverless invoke -f hello -l",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test:e2e": "mocha test/e2e --recursive"
   },
   "author": "Jonathan Foster <jonathan.e.foster@gmail.com>",
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
+    "axios": "^0.18.0",
+    "chai": "^4.1.2",
+    "dotenv": "^6.0.0",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^13.0.0",
-    "eslint-plugin-import": "^2.13.0"
+    "eslint-plugin-import": "^2.13.0",
+    "mocha": "^5.2.0",
+    "serverless": "^1.27.3",
+    "serverless-domain-manager": "^2.4.0"
   }
 }
