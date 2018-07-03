@@ -1,0 +1,19 @@
+{
+  "name": "twilio-gatekeeper",
+  "version": "0.1.0",
+  "description": "",
+  "main": "src/handler.js",
+  "scripts": {
+    "deploy": "serverless deploy -v",
+    "invoke": "serverless invoke -f hello -l",
+    "lint": "eslint ."
+  },
+  "author": "Jonathan Foster <jonathan.e.foster@gmail.com>",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0"
+  }
+}

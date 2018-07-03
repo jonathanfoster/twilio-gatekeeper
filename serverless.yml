@@ -1,0 +1,8 @@
+service: twilio-gatekeeper
+provider:
+  name: aws
+  runtime: nodejs6.10
+  profile: jonathan@jonathanfoster
+functions:
+  hello:
+    handler: src/handler.hello
