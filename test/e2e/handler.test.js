@@ -21,6 +21,20 @@ describe('POST /authorize', () => {
       });
   });
 
+  it('should forward call to operator when requested', () => {
+    return request.post(`${config.baseURL}/authorize`, querystring.stringify({ Digits: '0' }))
+      .then((res) => {
+        xml2js.parseString(res.data, (err, result) => {
+          if (err) {
+            assert.fail(err);
+            return;
+          }
+
+          assert.equal(result.Response.Dial[0], config.operator);
+        });
+      });
+  });
+
   it('should grant access when passcode is correct', () => {
     return request.post(`${config.baseURL}/authorize`, querystring.stringify({ Digits: config.passcode }))
       .then((res) => {
@@ -46,7 +60,7 @@ describe('POST /authorize', () => {
 
           assert.equal(result.Response.Gather[0].$.action, `${config.baseURL}/authorize`);
           assert.equal(result.Response.Gather[0].$.method, 'POST');
-          assert.equal(result.Response.Gather[0].Say, 'The passcode you entered is incorrect. Please try again.');
+          assert.exists(result.Response.Gather[0].Say);
         });
       });
   });
@@ -78,7 +92,7 @@ describe('POST /hello', () => {
 
           assert.equal(result.Response.Gather[0].$.action, `${config.baseURL}/authorize`);
           assert.equal(result.Response.Gather[0].$.method, 'POST');
-          assert.equal(result.Response.Gather[0].Say, 'Please enter your passcode followed by the pound sign.');
+          assert.exists(result.Response.Gather[0].Say);
         });
       });
   });

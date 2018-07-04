@@ -10,6 +10,10 @@ describe('config', () => {
     assert.equal(config.baseURL, 'https://gatekeeper.jonathanfoster.io');
   });
 
+  it('should default operator to `786-355-8794`', () => {
+    assert.equal(config.operator, '786-355-8794');
+  });
+
   it('should default passcode to `1234`', () => {
     assert.equal(config.passcode, '1234');
   });
