@@ -28,6 +28,13 @@ functions:
             headers:
               Content-Type: "'application/xml'"
             template: $input.path("$")
+  version:
+    handler: src/handler.version
+    events:
+      - http:
+          path: version
+          method: get
+          integration: lambda
 
 plugins:
   - serverless-domain-manager

@@ -1,5 +1,6 @@
 const { VoiceResponse } = require('twilio').twiml;
 const config = require('./config');
+const pkg = require('../package');
 
 module.exports.authorize = (event, context, callback) => {
   const digits = event.body.Digits;
@@ -54,4 +55,10 @@ module.exports.hello = (event, context, callback) => {
   response.say('Goodbye.');
 
   callback(null, response.toString());
+};
+
+module.exports.version = (event, context, callback) => {
+  callback(null, {
+    version: pkg.version,
+  });
 };

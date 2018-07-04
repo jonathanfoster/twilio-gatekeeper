@@ -111,3 +111,19 @@ describe('POST /hello', () => {
       });
   });
 });
+
+describe('GET /version', () => {
+  it('should return 200', () => {
+    return request(`${config.baseURL}/version`)
+      .then((res) => {
+        assert.equal(res.status, 200);
+      });
+  });
+
+  it('should return version', () => {
+    return request(`${config.baseURL}/version`)
+      .then((res) => {
+        assert.exists(res.data.version);
+      });
+  });
+});
