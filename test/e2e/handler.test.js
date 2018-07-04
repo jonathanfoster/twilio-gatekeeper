@@ -58,9 +58,23 @@ describe('POST /authorize', () => {
             return;
           }
 
-          assert.equal(result.Response.Gather[0].$.action, `${config.baseURL}/authorize`);
+          assert.equal(result.Response.Gather[0].$.action, `${config.baseURL}/authorize?attempt=2`);
           assert.equal(result.Response.Gather[0].$.method, 'POST');
           assert.exists(result.Response.Gather[0].Say);
+        });
+      });
+  });
+
+  it('should disconnect after 3 incorrect attempts', () => {
+    return request.post(`${config.baseURL}/authorize?attempt=3`)
+      .then((res) => {
+        xml2js.parseString(res.data, (err, result) => {
+          if (err) {
+            assert.fail(err);
+            return;
+          }
+
+          assert.exists(result.Response.Hangup[0]);
         });
       });
   });

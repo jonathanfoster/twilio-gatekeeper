@@ -10,6 +10,10 @@ describe('config', () => {
     assert.equal(config.baseURL, 'https://gatekeeper.jonathanfoster.io');
   });
 
+  it('should default max attempts to 3', () => {
+    assert.equal(config.maxAttempts, 3);
+  });
+
   it('should default operator to `786-355-8794`', () => {
     assert.equal(config.operator, '786-355-8794');
   });
