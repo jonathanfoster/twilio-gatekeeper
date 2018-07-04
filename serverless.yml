@@ -6,14 +6,17 @@ provider:
   profile: jonathan@jonathanfoster
 
 functions:
-  health:
-    handler: src/handler.health
+  authorize:
+    handler: src/handler.authorize
     events:
       - http:
-          path: health
-          method: get
+          path: authorize
+          method: post
           integration: lambda
-
+          response:
+            headers:
+              Content-Type: "'application/xml'"
+            template: $input.path("$")
   hello:
     handler: src/handler.hello
     events:

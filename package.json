@@ -5,12 +5,17 @@
   "main": "src/handler.js",
   "scripts": {
     "deploy": "serverless deploy -v",
-    "invoke": "serverless invoke -f hello -l",
     "lint": "eslint .",
-    "test:e2e": "mocha test/e2e --recursive"
+    "test": "mocha test/ --recursive",
+    "test:e2e": "mocha test/e2e/ --recursive",
+    "test:unit": "mocha test/unit/ --recursive"
   },
   "author": "Jonathan Foster <jonathan.e.foster@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/jonathanfoster/twilio-gatekeeper.git"
+  },
   "dependencies": {
     "twilio": "^3.17.4"
   },
