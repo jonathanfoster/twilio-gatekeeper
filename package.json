@@ -1,7 +1,7 @@
 {
   "name": "twilio-gatekeeper",
   "version": "0.1.0",
-  "description": "",
+  "description": "Twilio Gatekeeper is an automated access control system (ACS) for gated communities and apartment buildings.",
   "main": "src/handler.js",
   "scripts": {
     "deploy": "serverless deploy -v",
@@ -13,8 +13,8 @@
   "author": "Jonathan Foster <jonathan.e.foster@gmail.com>",
   "license": "MIT",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/jonathanfoster/twilio-gatekeeper.git"
+    "type": "git",
+    "url": "https://github.com/jonathanfoster/twilio-gatekeeper.git"
   },
   "dependencies": {
     "twilio": "^3.17.4"

@@ -35,5 +35,5 @@ plugins:
 custom:
   customDomain:
     domainName: gatekeeper.jonathanfoster.io
-    certificateName: '*.jonathanfoster.io'
+    certificateName: "*.jonathanfoster.io"
     createRoute53Record: true
