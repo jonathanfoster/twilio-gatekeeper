@@ -1,11 +1,15 @@
-module.exports.hello = (event, context, callback) => {
-  const response = {
-    statusCode: 200,
-    body: JSON.stringify({
-      message: 'twilio-gatekeeper function executed successfully!',
-      input: event,
-    }),
-  };
+const VoiceResponse = require('twilio').twiml.VoiceResponse;
 
-  callback(null, response);
+module.exports.health = (event, context, callback) => {
+  callback(null, {
+    statusCode: 200,
+  });
+};
+
+module.exports.hello = (event, context, callback) => {
+  const res = new VoiceResponse();
+
+  res.say({ voice: 'alice' }, 'Please enter the passcode.');
+
+  callback(null, res.toString());
 };

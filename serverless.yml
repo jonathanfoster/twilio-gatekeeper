@@ -6,14 +6,25 @@ provider:
   profile: jonathan@jonathanfoster
 
 functions:
+  health:
+    handler: src/handler.health
+    events:
+      - http:
+          path: health
+          method: get
+          integration: lambda
+
   hello:
     handler: src/handler.hello
     events:
       - http:
           path: hello
-          method: get
+          method: post
           integration: lambda
-          cors: true
+          response:
+            headers:
+              Content-Type: "'application/xml'"
+            template: $input.path("$")
 
 plugins:
   - serverless-domain-manager
