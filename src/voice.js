@@ -54,7 +54,7 @@ module.exports.incorrectPasscode = (attempt) => {
 module.exports.transferToOperator = () => {
   const response = new VoiceResponse();
 
-  response.say(messages.transferringToOperator);
+  response.say(messages.transferOperator);
   response.dial(config.operator);
 
   return response;

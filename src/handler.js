@@ -8,7 +8,7 @@ module.exports.authorize = (event, context, callback) => {
 
   switch (digits) {
     case '0':
-      callback(null, voice.transferToOperator().toString());
+      callback(null, voice.transferOperator().toString());
       return;
     case config.passcode:
       callback(null, voice.accessGranted().toString());
