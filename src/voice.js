@@ -16,7 +16,6 @@ module.exports.accessGranted = () => {
 
 module.exports.enterPasscode = () => {
   const response = new VoiceResponse();
-
   const gather = response.gather({
     action: authorizeURL,
     method: 'POST',
@@ -39,7 +38,6 @@ module.exports.goodbye = () => {
 
 module.exports.incorrectPasscode = (attempt) => {
   const response = new VoiceResponse();
-
   const gather = response.gather({
     action: `${authorizeURL}?attempt=${attempt}`,
     method: 'POST',
@@ -51,7 +49,7 @@ module.exports.incorrectPasscode = (attempt) => {
   return response;
 };
 
-module.exports.transferToOperator = () => {
+module.exports.transferOperator = () => {
   const response = new VoiceResponse();
 
   response.say(messages.transferOperator);

@@ -14,7 +14,6 @@ module.exports.authorize = (event, context, callback) => {
       callback(null, voice.accessGranted().toString());
       return;
     default:
-      // Disconnect after max attempts
       if (attempt >= config.maxAttempts) {
         callback(null, voice.goodbye().toString());
         return;
