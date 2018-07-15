@@ -7,18 +7,18 @@ describe('messages', () => {
   });
 
   it('enter passcode should exist', () => {
-    assert.exists(messages.accessGranted);
+    assert.exists(messages.enterPasscode);
   });
 
   it('goodbye should exist', () => {
-    assert.exists(messages.accessGranted);
+    assert.exists(messages.goodbye);
   });
 
   it('passcode incorrect should exist', () => {
-    assert.exists(messages.accessGranted);
+    assert.exists(messages.passcodeIncorrect);
   });
 
   it('transfer operator should exist', () => {
-    assert.exists(messages.accessGranted);
+    assert.exists(messages.transferOperator);
   });
 });
