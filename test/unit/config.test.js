@@ -14,8 +14,8 @@ describe('config', () => {
     assert.equal(config.maxAttempts, 3);
   });
 
-  it('should default operator to `786-355-8794`', () => {
-    assert.equal(config.operator, '786-355-8794');
+  it('should default operator to `202-297-6584`', () => {
+    assert.equal(config.operator, '202-297-6584');
   });
 
   it('should default passcode to `1234`', () => {
