@@ -4,7 +4,7 @@
   "description": "Twilio Gatekeeper is an automated access control system (ACS) for gated communities and apartment buildings.",
   "main": "src/handler.js",
   "scripts": {
-    "deploy": "npm run precommit && serverless deploy -v",
+    "deploy": "serverless deploy -v",
     "lint": "eslint .",
     "precommit": "npm run lint && npm run test:unit",
     "test": "mocha test/ --recursive",
