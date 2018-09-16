@@ -3,7 +3,6 @@ service: twilio-gatekeeper
 provider:
   name: aws
   runtime: nodejs8.10
-  profile: jonathan@jonathanfoster
 
 functions:
   authorize:
