@@ -4,12 +4,13 @@
   "description": "Twilio Gatekeeper is an automated access control system (ACS) for gated communities and apartment buildings.",
   "main": "src/handler.js",
   "scripts": {
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls",
     "deploy": "serverless deploy -v",
     "lint": "eslint .",
     "precommit": "npm run lint && npm run test:unit",
     "test": "mocha test/ --recursive",
     "test:e2e": "mocha test/e2e/ --recursive",
-    "test:unit": "nyc mocha test/unit/ --recursive"
+    "test:unit": "nyc mocha test/unit/ --recursive && nyc report --reporter=lcov"
   },
   "author": "Jonathan Foster <jonathan.e.foster@gmail.com>",
   "license": "MIT",
@@ -23,6 +24,7 @@
   "devDependencies": {
     "axios": "^0.18.0",
     "chai": "^4.1.2",
+    "coveralls": "^3.0.2",
     "dotenv": "^6.0.0",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^13.1.0",

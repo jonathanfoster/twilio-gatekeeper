@@ -1,5 +1,8 @@
 # Twilio Gatekeeper
 
+[![Build Status](https://travis-ci.org/jonathanfoster/twilio-gatekeeper.svg?branch=master)](https://travis-ci.org/jonathanfoster/twilio-gatekeeper)
+[![Coverage Status](https://coveralls.io/repos/github/jonathanfoster/twilio-gatekeeper/badge.svg?branch=master)](https://coveralls.io/github/jonathanfoster/twilio-gatekeeper?branch=master)
+
 Twilio Gatekeeper is an automated access control system (ACS) for gated communities and apartment buildings. Gatekeeper prompts 
 visitors for a passcode and if correct, dials a specific number to grant access using the standard telephone entry 
 systems found in most communities.
