@@ -3,4 +3,5 @@
 .serverless/
 coverage/
 node_modules/
+.env
 *.swp
