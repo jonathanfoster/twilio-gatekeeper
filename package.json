@@ -1,6 +1,6 @@
 {
   "name": "twilio-gatekeeper",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Twilio Gatekeeper is an automated access control system (ACS) for gated communities and apartment buildings.",
   "main": "src/handler.js",
   "scripts": {
