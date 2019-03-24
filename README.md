@@ -3,8 +3,8 @@
 [![Build Status](https://travis-ci.org/jonathanfoster/twilio-gatekeeper.svg?branch=master)](https://travis-ci.org/jonathanfoster/twilio-gatekeeper)
 [![Coverage Status](https://coveralls.io/repos/github/jonathanfoster/twilio-gatekeeper/badge.svg?branch=master)](https://coveralls.io/github/jonathanfoster/twilio-gatekeeper?branch=master)
 
-Twilio Gatekeeper is an automated access control system (ACS) for gated communities and apartment buildings. Gatekeeper prompts 
-visitors for a passcode and if correct, dials a specific number to grant access using the standard telephone entry 
+Twilio Gatekeeper is an automated access control system (ACS) for gated communities and apartment buildings. Gatekeeper prompts
+visitors for a passcode and if correct, dials a specific number to grant access using the standard telephone entry
 systems found in most communities.
 
 Gatekeeper uses [Twilio](https://www.twilio.com), [Serverless](https://serverless.com), and [AWS Lambda](https://aws.amazon.com/lambda/).
@@ -68,10 +68,7 @@ tutorial.
 
 ## Updating ACS Contact Number
 
-Finally, contact your community manager and have them change your ACS phone number to the Twilio number above. 
-
-You may want to use a [Google Voice](https://voice.google.com/) number for the initial call and then forward to your 
-Twilio number. This way you don't have contact your community manager again to change numbers in the future.
+Finally, contact your community manager and have them change your ACS phone number to the Twilio number above.
 
 ## Using a Custom Domain
 
@@ -92,5 +89,5 @@ custom:
     createRoute53Record: true
 ```
 
-**Note:** `serverless.yml` is configured for a custom domain and certificate by default. If this is not necessary for 
+**Note:** `serverless.yml` is configured for a custom domain and certificate by default. If this is not necessary for
 your use case, then simply remove the `customDomain` section.
