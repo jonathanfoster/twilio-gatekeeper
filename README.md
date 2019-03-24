@@ -41,7 +41,10 @@ Before getting started, make sure the following prerequisites are met:
     GATEKEEPER_MAX_ATTEMPTS=$YOUR_MAX_ATTEMPTS
     GATEKEEPER_OPERATOR=$YOUR_OPERATOR_NUMBER
     GATEKEEPER_PASSCODE=$YOUR_PASSCODE
-    GATEKEEPER_URL=$YOUR_SERVICE_URL" > .env
+    GATEKEEPER_URL=$YOUR_SERVICE_URL
+    GATEKEEPER_DOMAIN_ENABLED=$YOUR_DOMAIN_ENABLED
+    GATEKEEPER_DOMAIN_NAME=$YOUR_DOMAIN_NAME
+    GATEKEEPER_CERTIFICATE_NAME=$YOUR_CERTIFICATE_NAME" > .env
     ```
 
 4. Deploy to AWS
@@ -76,18 +79,10 @@ You can use a custom domain for your service by using the [Serverless Domain Man
 plugin. See [How to set up a custom domain name for Lambda & API Gateway with Serverless](https://serverless.com/blog/serverless-api-gateway-domain/)
 for more details on setting up a custom domain and certificate using Route53 and Certificate Manager.
 
-Add the following to `serverless.yml`.
+Using a custom domain name is disabled by default. To enabled a custom domain, set these environment variables:
 
-```yaml
-plugins:
-  - serverless-domain-manager
-
-custom:
-  customDomain:
-    domainName: $YOUR_DOMAIN_NAME
-    certificateName: $YOUR_CERTIFICATE_NAME
-    createRoute53Record: true
-```
-
-**Note:** `serverless.yml` is configured for a custom domain and certificate by default. If this is not necessary for
-your use case, then simply remove the `customDomain` section.
+  ```bash
+  GATEKEEPER_DOMAIN_ENABLED=true
+  GATEKEEPER_DOMAIN_NAME=$YOUR_DOMAIN_NAME
+  GATEKEEPER_CERTIFICATE_NAME=$YOUR_CERTIFICATE_NAME"
+  ```

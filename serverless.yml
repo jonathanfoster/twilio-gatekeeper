@@ -3,6 +3,12 @@ service: twilio-gatekeeper
 provider:
   name: aws
   runtime: nodejs8.10
+  environment:
+    GATEKEEPER_ACCESS_TONE: ${env:GATEKEEPER_ACCESS_TONE}
+    GATEKEEPER_MAX_ATTEMPTS: ${env:GATEKEEPER_MAX_ATTEMPTS}
+    GATEKEEPER_OPERATOR: ${env:GATEKEEPER_OPERATOR}
+    GATEKEEPER_PASSCODE: ${env:GATEKEEPER_PASSCODE}
+    GATEKEEPER_URL: ${env:GATEKEEPER_URL}
 
 functions:
   authorize:
@@ -40,6 +46,7 @@ plugins:
 
 custom:
   customDomain:
-    domainName: gatekeeper.jonathanfoster.io
-    certificateName: "*.jonathanfoster.io"
+    domainName: ${env:GATEKEEPER_DOMAIN_NAME}
+    certificateName: ${env:GATEKEEPER_CERTIFICATE_NAME}
     createRoute53Record: true
+    enabled: ${env:GATEKEEPER_DOMAIN_ENABLED}
