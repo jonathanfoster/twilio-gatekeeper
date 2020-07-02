@@ -20,20 +20,20 @@
   },
   "dependencies": {
     "lodash": "^4.17.15",
-    "twilio": "^3.19.2"
+    "twilio": "^3.47.0"
   },
   "devDependencies": {
-    "axios": "^0.18.1",
-    "chai": "^4.1.2",
-    "coveralls": "^3.0.2",
-    "dotenv": "^6.0.0",
-    "eslint": "^4.19.1",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.14.0",
-    "mocha": "^5.2.0",
-    "nyc": "^14.1.1",
-    "serverless": "^1.39.1",
-    "serverless-domain-manager": "^2.6.5",
-    "xml2js": "^0.4.19"
+    "axios": "^0.19.2",
+    "chai": "^4.2.0",
+    "coveralls": "^3.1.0",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.3.1",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "mocha": "^8.0.1",
+    "nyc": "^15.1.0",
+    "serverless": "^1.74.1",
+    "serverless-domain-manager": "^4.1.1",
+    "xml2js": "^0.4.23"
   }
 }
