@@ -19,7 +19,7 @@
     "url": "https://github.com/jonathanfoster/twilio-gatekeeper.git"
   },
   "dependencies": {
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "twilio": "^3.47.0"
   },
   "devDependencies": {
