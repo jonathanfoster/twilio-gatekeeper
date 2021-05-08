@@ -20,10 +20,11 @@
   },
   "dependencies": {
     "lodash": "^4.17.19",
+    "npm": "^7.12.0",
     "twilio": "^3.47.0"
   },
   "devDependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "chai": "^4.2.0",
     "coveralls": "^3.1.0",
     "dotenv": "^8.2.0",
@@ -32,7 +33,7 @@
     "eslint-plugin-import": "^2.22.0",
     "mocha": "^8.0.1",
     "nyc": "^15.1.0",
-    "serverless": "^1.74.1",
+    "serverless": "^2.40.0",
     "serverless-domain-manager": "^4.1.1",
     "xml2js": "^0.4.23"
   }
