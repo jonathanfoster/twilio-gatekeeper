@@ -35,6 +35,6 @@
     "nyc": "^15.1.0",
     "serverless": "^2.40.0",
     "serverless-domain-manager": "^4.1.1",
-    "xml2js": "^0.4.23"
+    "xml2js": "^0.5.0"
   }
 }
